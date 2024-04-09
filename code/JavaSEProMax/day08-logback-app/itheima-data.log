@@ -1,0 +1,5 @@
+2023-05-30 11:45:43.168 [main] DEBUG Test.class - main方法开始执行了~~~
+2023-05-30 11:45:43.170 [main] INFO  Test.class - 我开始记录第二行日志，我要开始做除法
+2023-05-30 11:45:43.174 [main] TRACE Test.class - a=10
+2023-05-30 11:45:43.174 [main] TRACE Test.class - b=0
+2023-05-30 11:45:43.175 [main] ERROR Test.class - 功能出现异常，java.lang.ArithmeticException: / by zero

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jaxen-1.1.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/day14-xml-app/lib/jaxen-1.1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

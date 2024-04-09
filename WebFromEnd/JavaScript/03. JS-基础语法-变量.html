@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-基础语法</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //var定义变量
+    //var a = 10;
+    //a = "张三";
+    //alert(a);
+
+    //特点1：作用域比较大，全局变量
+    //特点2：可以重复定义的
+    /*{
+        var x = 1;
+        var x = "A";
+        alert(x);
+    }
+    alert(x);   //在外面也是可以拿到的*/
+
+    //let：局部变量，且不能重复定义
+    {
+        let x = 1;
+        alert(x);
+    }
+
+    //const：常量，不能给改变的
+    const  pi = 3.14;
+    pi = 3.15;
+    alert(pi);  //这里会在控制台报错
+</script>
+</html>
