@@ -23,7 +23,7 @@ public class Code04_MinSwapStep {
     //直到index指向了最后一个元素并且判断或统计完成之后，算法结束，返回最终结果
     //这个算法好好思考一下“贪心”贪在了哪里，重点在于理解如何让交换次数最少，而不是上来用冒泡方式解决，因为那样一定不是交换最少的策略
     public static int minSteps1(String s) {
-        if (s == null || s.equals("")) {
+        if (s == null || s.isEmpty()) {
             return 0;
         }
         char[] str = s.toCharArray();
@@ -46,7 +46,7 @@ public class Code04_MinSwapStep {
         int ans2 = 0;
         while (index != str.length) {
             if (str[index] == 'B') {
-                ans1 += index - left;
+                ans2 += index - left;
                 index++;
                 left++;
             } else {
@@ -85,7 +85,7 @@ public class Code04_MinSwapStep {
     }
 
     public static void main(String[] args) {
-        int maxLen = 100;
+        int maxLen = 10;
         int testTime = 1000000;
         System.out.println("测试开始");
         for (int i = 0; i < testTime; i++) {
