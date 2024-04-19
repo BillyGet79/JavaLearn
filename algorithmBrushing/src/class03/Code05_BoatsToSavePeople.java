@@ -44,23 +44,26 @@ public class Code05_BoatsToSavePeople {
         //注意：虽然顺序查找时间复杂度更高，但是上面有一个排序，时间复杂已经为O(nlogn)了，所以不用担心这里顺序查找会影响时间复杂度
         int left = 0;
         int right = N - 1;
-        while (right != left) {
+        int index = -1; //用来记录所要找的下标
+        while (left <= right) {
             int mid = left + ((right - left) >> 1);
-            if (people[mid] > limit / 2) {
-                right = mid - 1;
-            } else {
+            if (people[mid] <= limit / 2) {
+                index = mid;
                 left = mid + 1;
+            } else {
+                right = mid - 1;
             }
         }
+        left = index;
         //这个时候left与right都已经指向了<=limit/2最右侧的下标
         //看看left指向的是否是真的<=limit/2
-        if (people[left] > limit / 2) {
-            return people.length;
+        if (left == 0 && people[left] > limit / 2) {
+            return N;
         }
         //用一个副本保存left位置
         int lessR = left;
         //这个时候我们正式开始算法执行
-        right++;
+        right = left + 1;
         int noUsed = 0;
         while (left >= 0) {
             int solved = 0;
@@ -82,8 +85,8 @@ public class Code05_BoatsToSavePeople {
     }
 
     public static void main(String[] args) {
-        int[] people = {3,2,2,1};
-        int limit = 3;
+        int[] people = {251,910,983,811,903};
+        int limit = 1000;
         System.out.println(numRescueBoats(people, limit));
     }
 }
