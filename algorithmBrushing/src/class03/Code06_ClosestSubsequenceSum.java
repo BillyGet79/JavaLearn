@@ -1,7 +1,6 @@
 package class03;
 
 import java.util.Arrays;
-import java.util.Map;
 
 /**
  * 题目6
@@ -55,7 +54,7 @@ public class Code06_ClosestSubsequenceSum {
             arr[fill++] = sum;
         } else {
             fill = process(nums, index + 1, end, sum, fill, arr);
-            fill = process(nums,  index + 1, end, sum + arr[index], fill, arr);
+            fill = process(nums,  index + 1, end, sum + nums[index], fill, arr);
         }
         return fill;
     }
