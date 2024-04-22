@@ -18,12 +18,65 @@ public class Code03_SubMatrixMaxSum {
      *  然后求1-1行，1-2行，......
      * 不过我们需要进行数组压缩，我们需要通过前缀累加和求出每一列0-n行的累加和是多少
      */
+
+    public static int maxSum(int[][] m) {
+        if (m == null || m.length == 0 || m[0].length == 0) {
+            return 0;
+        }
+        int N = m.length;
+        int M = m[0].length;
+        int max = Integer.MIN_VALUE;
+        int cur = 0;
+        //两个for循环
+        //i行到j行进行处理
+        for (int i = 0; i < N; i++) {
+            int[] s = new int[M];
+            for (int j = i; j < N; j++) {
+                cur = 0;
+                for (int k = 0; k < M; k++) {
+                    //遍历到当前位置后，就在s数组中加上这个数据
+                    s[k] += m[j][k];
+                    cur += s[k];
+                    max = Math.max(max, cur);
+                    cur = cur < 0 ? 0 : cur;
+                }
+            }
+        }
+        return max;
+    }
+
+
     public static int[] getMaxMatrix(int[][] matrix) {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return null;
         }
-        int row = matrix.length;
-        int col = matrix[0].length;
-
+        int N = matrix.length;
+        int M = matrix[0].length;
+        int max = Integer.MIN_VALUE;
+        int cur = 0;
+        int[] ans = new int[]{0, 0, 0, 0};
+        for (int i = 0; i < N; i++) {
+            int[] s = new int[M];
+            for (int j = i; j < N; j++) {
+                cur = 0;
+                int begin = 0;
+                for (int k = 0; k < M; k++) {
+                    s[k] += matrix[j][k];
+                    cur += s[k];
+                    if (max < cur) {
+                        max = cur;
+                        ans[0] = i;
+                        ans[1] = begin;
+                        ans[2] = j;
+                        ans[3] = k;
+                    }
+                    if (cur < 0) {
+                        cur = 0;
+                        begin = k + 1;
+                    }
+                }
+            }
+        }
+        return ans;
     }
 }
