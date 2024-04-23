@@ -1,3 +1,5 @@
+package aliTest;
+
 import java.io.*;
 
 public class SlashAndBacklashCount {
