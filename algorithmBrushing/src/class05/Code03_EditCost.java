@@ -3,7 +3,6 @@ package class05;
 /**
  * 题目3
  * 编辑距离问题
- * 给定两个字符串s1和s2，问s2最少删除多少字符可以成为s1的子串？比如 s1 = "abcde"，s2 = "axbc"，s2删掉'x'即可，返回1
  * 本题对三个操作策略进行了代价赋值，在LeetCode有一个类似的题目在记录操作数，其实是一个道理
  * 链接如下（可以根据下面的代码做改进，或者三个代价全部改为1也可以）：<a href="https://leetcode.cn/problems/edit-distance/description/">...</a>
  */
