@@ -481,6 +481,107 @@ SELECT
 	) AS rn2
 FROM employee;
 
+-- 前后函数
+
+-- LAG的用法
+SELECT
+	dname,
+	ename,
+	salary,
+	hiredate,
+	LAG(hiredate, 1, '2000-01-01') OVER(
+		PARTITION BY dname
+		ORDER BY hiredate
+	) AS time1,
+	LAG(hiredate, 2) OVER(
+		PARTITION BY dname
+		ORDER BY hiredate
+	) AS time2
+FROM employee;
+
+-- LEAD的用法
+SELECT
+	dname,
+	ename,
+	salary,
+	hiredate,
+	LEAD(hiredate, 1, '2000-01-01') OVER(
+		PARTITION BY dname
+		ORDER BY hiredate
+	) AS time1,
+	LEAD(hiredate, 2) OVER(
+		PARTITION BY dname
+		ORDER BY hiredate
+	) AS time2
+FROM employee;
+
+-- 头尾函数
+
+-- 注意,  如果不指定ORDER BY，则进行排序混乱，会出现错误的结果
+SELECT
+	dname,
+	ename,
+	salary,
+	hiredate,
+	FIRST_VALUE(salary) OVER(
+		PARTITION BY dname
+		ORDER BY hiredate
+	) AS first,
+	LAST_VALUE(salary) OVER(
+		PARTITION BY dname
+		ORDER BY hiredate
+	) AS last
+FROM employee;
+
+-- 其他函数
+
+-- NTH_VALUE(expr, n)
+SELECT
+	dname,
+	ename,
+	salary,
+	hiredate,
+	NTH_VALUE(salary, 2) OVER(
+		PARTITION BY dname
+		ORDER BY hiredate
+	) AS second_score,
+	NTH_VALUE(salary, 3) OVER(
+		PARTITION BY dname
+		ORDER BY hiredate
+	) AS third_score
+FROM employee;
+
+
+-- NTILE(n)
+-- 基本上是均分的
+-- 优先前面的分组数量多
+SELECT
+	dname,
+	ename,
+	salary,
+	hiredate,
+	NTILE(3) OVER(
+		PARTITION BY dname
+		ORDER BY hiredate
+	) AS nt
+FROM employee;
+
+-- 取出每一个部门的第一组员工
+SELECT
+*
+FROM(
+	SELECT
+		dname,
+		ename,
+		salary,
+		hiredate,
+		NTILE(3) OVER(
+			PARTITION BY dname
+			ORDER BY hiredate
+		) AS nt
+	FROM employee
+) t
+WHERE t.nt = 1;
 
 
 
