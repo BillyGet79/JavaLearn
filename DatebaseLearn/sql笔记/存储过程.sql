@@ -266,19 +266,298 @@ delimiter;
 CALL proc_15_case(88);
 
 
+-- 循环-WHILE
+
+-- 创建测试表
+CREATE TABLE user(
+	uid INT PRIMARY KEY,
+	username VARCHAR(50),
+	password varchar(50)
+);
+
+-- 需求：向表中添加指定条数数据
+delimiter $$
+CREATE PROCEDURE proc16_while(IN insertCount INT)
+BEGIN
+	DECLARE i INT DEFAULT 1;
+	label:WHILE i <= insertCount DO
+		INSERT INTO user(uid, username, password) VALUES(i, CONCAT('user', i), '123456');
+		SET i = i + 1;
+	END WHILE label;
+end$$
+delimiter;
+
+CALL proc16_while(10);
+
+-- WHILE + LEAVE
+TRUNCATE TABLE user;
+
+delimiter $$
+CREATE PROCEDURE proc17_while_leave(IN insertCount INT)
+BEGIN
+	DECLARE i INT DEFAULT 1;
+	label:WHILE i <= insertCount DO
+		INSERT INTO user(uid, username, password) VALUES(i, CONCAT('user', i), '123456');
+		IF i = 5
+			THEN LEAVE label;
+		END IF;
+		SET i = i + 1;
+	END WHILE label;
+end$$
+delimiter;
+
+CALL proc17_while_leave(10);
+
+-- WHILE + ITERATE
+CREATE TABLE user2(
+	uid INT,
+	username VARCHAR(50),
+	password varchar(50)
+);
+TRUNCATE TABLE user2;
+
+delimiter $$
+CREATE PROCEDURE proc18_while_iterate(IN insertCount INT)
+BEGIN
+	DECLARE i INT DEFAULT 0;
+	label:WHILE i < insertCount DO
+		SET i = i + 1;
+		IF i = 5
+			THEN ITERATE label;
+		END IF;
+		INSERT INTO user2(uid, username, password) VALUES(i, CONCAT('user', i), '123456');
+	END WHILE label;
+	SELECT '循环结束';
+end$$
+delimiter;
+
+CALL proc18_while_iterate(10);	-- 1 2 3 4 6 7 8 9 0
+
+
+-- REPEAT
+TRUNCATE TABLE user;
+delimiter $$
+CREATE PROCEDURE proc19_repeat(IN insertCount INT)
+BEGIN
+	DECLARE i INT DEFAULT 1;
+	label:REPEAT
+		INSERT INTO user(uid, username, password) VALUES(i, CONCAT('user', i), '123456');
+		SET i = i + 1;
+		UNTIL i > insertCount 
+	END REPEAT label;
+	SELECT '循环结束';
+end$$
+delimiter;
+
+CALL proc19_repeat(10);
+
+-- LOOP
+TRUNCATE TABLE user;
+delimiter $$
+CREATE PROCEDURE proc20_loop(IN insertCount INT)
+BEGIN
+	DECLARE i INT DEFAULT 1;
+	label: LOOP
+		INSERT INTO user(uid, username, password) VALUES(i, CONCAT('user-', i), '123456');
+		SET i = i + 1;
+		IF i > insertCount
+			THEN
+				LEAVE label;
+		END IF;
+	END LOOP label;
+END $$
+delimiter;
+
+CALL proc20_loop(100);
+
+-- 操作游标(CURSOR)
+
+-- 声明游标
+-- 打开游标
+-- 通过游标获取值
+-- 关闭游标
+
+-- 需求：输入一个部门名，查询该部门员工的编号、名字、薪资，将查询的结果集添加游标
+DROP PROCEDURE proc21_cursor;
+delimiter $$
+CREATE PROCEDURE proc21_cursor(in in_dname VARCHAR(50))
+BEGIN
+-- 	定义局部变量
+	DECLARE var_empno VARCHAR(50);
+	DECLARE var_ename VARCHAR(50);
+	DECLARE var_sal DECIMAL(7,2);
+-- 	声明游标
+	DECLARE my_cursor CURSOR FOR
+		SELECT empno, ename, sal
+		FROM dept a, emp b
+		WHERE a.deptno = b.deptno AND a.dname = in_dname;
+-- 	打开游标
+	OPEN my_cursor;
+-- 	通过游标获取值
+	label:LOOP
+		FETCH my_cursor INTO var_empno, var_ename, var_sal;
+		SELECT var_empno, var_ename, var_sal;
+	END LOOP label;
+-- 	关闭游标
+	CLOSE my_cursor;
+END $$
+delimiter;
+
+CALL proc21_cursor('销售部');
+
+
+-- 异常处理-句柄HANDLER
+DROP PROCEDURE proc22_handler;
+delimiter $$
+CREATE PROCEDURE proc22_handler(in in_dname VARCHAR(50))
+BEGIN
+-- 	定义局部变量
+	DECLARE var_empno VARCHAR(50);
+	DECLARE var_ename VARCHAR(50);
+	DECLARE var_sal DECIMAL(7,2);
+-- 	定义标记值
+	DECLARE flag int DEFAULT 1;
+-- 	声明游标
+	DECLARE my_cursor CURSOR FOR
+		SELECT empno, ename, sal
+		FROM dept a, emp b
+		WHERE a.deptno = b.deptno AND a.dname = in_dname;
+-- 	定义句柄：定义异常的处理方式
+	/*
+		1.异常处理完之后程序该怎么执行
+			CONTINUE:继续执行剩余代码
+			EXIT:直接终止程序
+			UNDO:不支持
+		2.触发条件
+			条件码:
+			条件名:
+				SQLWARNING
+				NOT FOUND
+				SQLEXCEPTION
+		3.异常触发之后执行什么代码
+			设置flag的值 --> 0
+	*/
+	DECLARE CONTINUE HANDLER FOR 1329 SET flag = 0;
+-- 	打开游标
+	OPEN my_cursor;
+-- 	通过游标获取值
+	label:LOOP
+		FETCH my_cursor INTO var_empno, var_ename, var_sal;
+-- 	判断flag，如果flag的值为1，则执行，否则不执行
+		IF flag = 1 THEN
+			SELECT var_empno, var_ename, var_sal;
+		ELSE
+			LEAVE label;
+		END IF;
+	END LOOP label;
+-- 	关闭游标
+	CLOSE my_cursor;
+END $$
+delimiter;
+
+CALL proc22_handler('销售部');
 
 
 
+-- 练习
 
+CREATE DATABASE mydb18_proc_demo;
+USE mydb18_proc_demo;
+DROP PROCEDURE IF EXISTS proc22_demo;
+delimiter $$
+CREATE PROCEDURE proc22_demo()
+BEGIN
+	DECLARE next_year INT;	-- 下一个月的年份
+	DECLARE next_month INT;	-- 下一个月的月份
+	DECLARE next_month_day INT;	-- 下一个月最后一天的日期
+	
+	DECLARE next_month_str VARCHAR(2);	-- 下一个月的月份字符串
+	DECLARE next_month_day_str VARCHAR(2);	-- 下一个月的日字符串
+	
+	-- 处理每天的表名
+	DECLARE table_name_str VARCHAR(10);
+	DECLARE t_index INT DEFAULT 1;
+	
+	-- 获取下个月的年份
+	SET next_year = YEAR(DATE_ADD(NOW(), INTERVAL 1 MONTH));
+	
+  -- 获取下个月是几月
+	SET next_month = MONTH(DATE_ADD(NOW(), INTERVAL 1 MONTH));
+	
+  -- 下个月最后一天是几号
+	SET next_month_day = DAYOFMONTH(LAST_DAY(DATE_ADD(NOW(),INTERVAL 1 MONTH)));
+	
+	IF next_month < 10
+		THEN SET next_month_str = CONCAT('0', next_month);	-- 1 --> 01
+	ELSE
+		SET next_month_str = CONCAT('', next_month);	-- 12 --> 12
+	END IF;
+	
+	WHILE t_index <= next_month_day DO
+		IF t_index < 10
+			THEN SET next_month_day_str = CONCAT('0', t_index);
+		ELSE
+			SET next_month_day_str = CONCAT('', t_index);
+		END IF;
+		
+    -- 2021_11_01
+		SET table_name_str = CONCAT(next_year, '_', next_month_str, '_', next_month_day_str);
+		-- 拼接create SQL
+		SET @create_table_sql = concat(
+                    'create table user_',
+                    table_name_str,
+                    '(`uid` INT ,`ename` varchar(50) ,`information` varchar(50)) COLLATE=\'utf8_general_ci\' ENGINE=InnoDB');
+		-- FROM后面不能使用局部变量
+		PREPARE create_table_stmt FROM @create_table_sql;
+		EXECUTE create_table_stmt;
+		DEALLOCATE PREPARE create_table_stmt;
+		
+		set t_index = t_index + 1;
+		
+	END WHILE;
+END $$
+delimiter;
 
+CALL proc22_demo();
 
+-- 存储函数
 
+-- 创建一个数据库
+CREATE DATABASE mydb9_function;
+USE mydb9_function;
 
+-- 允许创建函数权限信任
+set GLOBAL log_bin_trust_function_creators = TRUE;
+-- 创建存储函数-没有参数
+DROP FUNCTION IF EXISTS myfunc1_emp;
+delimiter $$
+CREATE FUNCTION myfunc1_emp() RETURNS INT
+BEGIN
+	-- 定义局部变量
+	DECLARE cnt INT DEFAULT 0;
+	SELECT COUNT(*) INTO cnt FROM emp;
+	RETURN cnt;
+END $$
+delimiter;
 
+-- 调用存储函数
+SELECT myfunc1_emp();
 
+-- 创建存储函数-有输入参数
+-- 需求：传入一个员工的编号，返回员工的名字
+DROP FUNCTION IF EXISTS myfunc2_emp;
+delimiter $$
+CREATE FUNCTION myfunc2_emp(in_empno INT) RETURNS VARCHAR(50)
+BEGIN
+	-- 定义局部变量
+	DECLARE out_ename VARCHAR(50);
+	SELECT ename INTO out_ename FROM emp WHERE empno = in_empno;
+	RETURN out_ename;
+END $$
+delimiter;
 
-
-
+-- 调用存储函数
+SELECT myfunc2_emp(1008);
 
 
 
