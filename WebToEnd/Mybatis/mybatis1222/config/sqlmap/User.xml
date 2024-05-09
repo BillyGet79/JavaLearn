@@ -41,6 +41,29 @@ ${value}：接收输入参数的内容，如果传入类型是简单类型，${}
             select LAST_INSERT_ID()
         </selectKey>
         insert into user(username, birthday, sex, address) values(#{username}, #{birthday}, #{sex}, #{address})
+        # 使用mysql的uuid()生成主键
+        # 执行过程
+        # 首先通过uuid()得到主键，将主键设置到user对象的id属性中
+        # 其次在insert执行时，从user对象中取出id属性值
+<!--        <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.String">-->
+<!--            select uuid()-->
+<!--        </selectKey>-->
+<!--        insert into user(id, username, birthday, sex, address) values(#{id}, #{username}, #{birthday}, #{sex}, #{address})-->
     </insert>
+
+<!--    删除用户
+    根据id删除用户，需要输入id值-->
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from user where id = #{id}
+    </delete>
+
+<!--    更新用户
+    分析：
+    需要传入用户的id
+    需要传入用户的更新信息
+    parameterType指定user对象，包括id和更新信息，注意：id必须存在-->
+    <update id="updateUser" parameterType="cn.itcast.mybatis.po.User">
+        update user set username = #{username}, birthday = #{birthday}, sex = #{sex}, address = #{address} where id = #{id}
+    </update>
 
 </mapper>
