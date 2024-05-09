@@ -81,4 +81,51 @@ public class MybatisFirst {
         sqlSession.close();
     }
 
+    //根据id删除用户信息
+    @Test
+    public void deleteUserByIdTest() throws Exception {
+        //mybatis配置文件
+        String resource = "SqlMapConfig.xml";
+        //得到配置文件流
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+        //创建会话工厂，传入mybatis的配置信息
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+        //通过工厂得到SqlSession
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        //传入id删除用户
+        sqlSession.delete("test.deleteUser", 28);
+
+        //提交事务
+        sqlSession.commit();
+        //关闭会话
+        sqlSession.close();
+    }
+
+    //根据id更新用户信息
+    @Test
+    public void updateUserByIdTest() throws Exception {
+        //mybatis配置文件
+        String resource = "SqlMapConfig.xml";
+        //得到配置文件流
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+        //创建会话工厂，传入mybatis的配置信息
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+        //通过工厂得到SqlSession
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        //传入id更新用户
+        User user = new User();
+        user.setId(27);
+        user.setUsername("王大军");
+        user.setBirthday(new Date());
+        user.setSex("2");
+        user.setAddress("河南郑州");
+        sqlSession.delete("test.updateUser", user);
+
+        //提交事务
+        sqlSession.commit();
+        //关闭会话
+        sqlSession.close();
+    }
 }
