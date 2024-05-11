@@ -13,7 +13,7 @@ id：标识映射文件中的sql，称为statement的id
 将sql语句封装到mapperStatement对象中，所以将id沉稳给statement的id
 #{}表示一个占位符
 parameterType:指定输入参数的类型
-#{id}：其中的id标识接收输入的参数，参数的名称就是id，如果输入参数是简单类型，#{}中的参数名可以任意，可以value或其他名称
+#{id}：其中的id标识接收输入的参数，参数的名称就是id，如果输入参数是简单类型，#{}中的参数名可以任意，可 以value或其他名称
 resultType：指定sql输出结果的所映射的java对象类型，select指定resultType表示将单条记录映射成java对象
 -->
     <select id="findUserById" parameterType="int" resultType="cn.itcast.mybatis.po.User">
