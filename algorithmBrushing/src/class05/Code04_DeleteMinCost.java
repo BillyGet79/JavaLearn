@@ -52,6 +52,7 @@ public class Code04_DeleteMinCost {
             }
         }
         dp[0][0] = 0;
+        return 0;
     }
 
 
