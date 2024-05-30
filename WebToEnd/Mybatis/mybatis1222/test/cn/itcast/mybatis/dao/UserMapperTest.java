@@ -2,6 +2,8 @@ package cn.itcast.mybatis.dao;
 
 import cn.itcast.mybatis.mapper.UserMapper;
 import cn.itcast.mybatis.po.User;
+import cn.itcast.mybatis.po.UserCustom;
+import cn.itcast.mybatis.po.UserQueryVo;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -63,7 +65,30 @@ public class UserMapperTest {
         sqlSession.close();
     }
 
+    @Test
+    public void testFindUserByUser() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        User user = new User();
+        user.setId(1);
+        user.setUsername("王五");
+        //传递user对象查询用户列表
+        List<User> list = userMapper.findUserByUser(user);
+        sqlSession.close();
+        System.out.println(list);
+    }
 
-
+    @Test
+    public void testFindUserList() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        UserQueryVo userQueryVo = new UserQueryVo();
+        userQueryVo.setUserCustom(new UserCustom());
+        userQueryVo.getUserCustom().setSex("1");
+        userQueryVo.getUserCustom().setUsername("张三");
+        List<UserCustom> list = userMapper.findUserList(userQueryVo);
+        sqlSession.close();
+        System.out.println(list);
+    }
 
 }

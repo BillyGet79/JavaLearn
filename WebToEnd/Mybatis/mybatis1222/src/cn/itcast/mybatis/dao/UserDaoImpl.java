@@ -62,4 +62,5 @@ public class UserDaoImpl implements UserDao {
         sqlSession.close();
 
     }
+
 }
