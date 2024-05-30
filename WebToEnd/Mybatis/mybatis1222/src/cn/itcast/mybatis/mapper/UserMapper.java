@@ -1,6 +1,8 @@
 package cn.itcast.mybatis.mapper;
 
 import cn.itcast.mybatis.po.User;
+import cn.itcast.mybatis.po.UserCustom;
+import cn.itcast.mybatis.po.UserQueryVo;
 
 import java.util.List;
 
@@ -13,7 +15,6 @@ public interface UserMapper {
     public User findUserById(int id) throws Exception;
 
     //根据用户名列查询用户列表
-    //
     public List<User> findUserByName(String name) throws Exception;
 
     //添加用户信息
@@ -22,7 +23,11 @@ public interface UserMapper {
     //删除用户信息
     public void deleteUser(int id) throws Exception;
 
+    //根据用户信息查用户
+    public List<User> findUserByUser(User user) throws Exception;
 
+    //用户信息综合查询
+    public List<UserCustom> findUserList(UserQueryVo userQueryVo) throws Exception;
 }
 
 
