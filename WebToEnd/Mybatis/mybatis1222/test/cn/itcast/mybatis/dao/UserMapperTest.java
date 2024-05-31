@@ -84,11 +84,36 @@ public class UserMapperTest {
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         UserQueryVo userQueryVo = new UserQueryVo();
         userQueryVo.setUserCustom(new UserCustom());
+        //由于这里使用了动态sql，如果某个值没有添加，则sql不会拼接进去
         userQueryVo.getUserCustom().setSex("1");
-        userQueryVo.getUserCustom().setUsername("张三");
+//        userQueryVo.getUserCustom().setUsername("张三");
         List<UserCustom> list = userMapper.findUserList(userQueryVo);
         sqlSession.close();
         System.out.println(list);
     }
+
+    @Test
+    public void testFindUserCount() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        UserQueryVo userQueryVo = new UserQueryVo();
+        UserCustom userCustom = new UserCustom();
+        userCustom.setSex("1");
+        userCustom.setUsername("张三");
+        userQueryVo.setUserCustom(userCustom);
+        int ans = userMapper.findUserCount(userQueryVo);
+        sqlSession.close();
+        System.out.println(ans);
+    }
+
+    @Test
+    public void testFindUserByIdResultMap() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        User user = userMapper.findUserByIdResultMap(1);
+        sqlSession.close();
+        System.out.println(user);
+    }
+
 
 }

@@ -6,12 +6,56 @@
 注意：使用mapper代理方法开发，namespace由特殊重要的作用，namespace等于mapper接口地址
 -->
 <mapper namespace="cn.itcast.mybatis.mapper.UserMapper">
+<!--    定义sql片段
+        id：sql片段的唯一标识
+        经验：是基于单表来定义sql片段，这样话这个sql片段可重用性才高
+        在sql片段中不要包括where-->
+    <sql id="query_user_where">
+        <if test="userCustom!=null">
+            <if test="userCustom.sex!=null and userCustom.sex!=''">
+                and user.sex = #{userCustom.sex}
+            </if>
+            <if test="userCustom.username!=null and userCustom.username!=''">
+                and user.username like '%${userCustom.username}%'
+            </if>
+        </if>
+    </sql>
+<!--    定义resultMap
+        将select id id_, username username_ from user 和user类中的属性做一个映射关系
+        type:resultMap最终映射的java对象类型，可以使用别名
+        id:对resultMap的唯一标识-->
+    <resultMap id="userResultMap" type="User">
+<!--        id表示查询结果集中唯一标识
+            column：查询出来的列名
+            property:type指定的pojo中的属性名
+            最终resultMap对column和property做一个映射关系-->
+        <id column="id_" property="id"/>
+<!--        result：对普通名映射定义
+            column：查询出来的列名
+            property:type指定的pojo中的属性名
+            最终resultMap对column和property做一个映射关系-->
+        <result column="username_" property="username"/>
+    </resultMap>
+
 <!--    在映射文件中配置很多sql语句-->
     <!--    用户信息的综合查询
         #{userCustom.sex}：取出pojo包装对象中的性别值
         ${userCustom.username}：取出pojo包装对象中用户名称-->
     <select id="findUserList" parameterType="UserQueryVo" resultType="UserCustom">
-        select * from user where user.sex = #{userCustom.sex} and user.username like '%${userCustom.username}%'
+        select * from user
+--         where可以自动去掉田间中的第一个and
+        <where>
+            <include refid="query_user_where"/>
+--         在这里还要引用其它的sql片段
+        </where>
+    </select>
+<!--    用户信息综合查询总数-->
+    <select id="findUserCount" parameterType="UserQueryVo" resultType="int">
+        select count(*) from user where user.sex = #{userCustom.sex} and user.username like '%${userCustom.username}%'
+    </select>
+<!--    使用resultMap进行输出映射-->
+    <select id="findUserByIdResultMap" parameterType="int" resultMap="userResultMap">
+        select id id_, username username_ from user where id = #{value}
     </select>
 <!--    需求：通过id查询用户表的记录-->
 <!--    通过select执行数据库查询
@@ -22,7 +66,7 @@ parameterType:指定输入参数的类型
 #{id}：其中的id标识接收输入的参数，参数的名称就是id，如果输入参数是简单类型，#{}中的参数名可以任意，可以value或其他名称
 resultType：指定sql输出结果的所映射的java对象类型，select指定resultType表示将单条记录映射成java对象
 -->
-    <select id="findUserById" parameterType="int" resultType="user">
+    <select id="findUserById" parameterType="int" resultType="User">
         select * from user where id = #{id}
     </select>
 <!--    根据用户名称模糊查询用户信息，可能返回多条
@@ -30,14 +74,14 @@ resultType：指定就是单条记录所映射的java对象类型
 ${}：表示拼接sql串，将接收到参数的内容不加任何修饰拼接在sql中
 但是使用${}拼接sql，引起sql注入
 ${value}：接收输入参数的内容，如果传入类型是简单类型，${}中只能使用value-->
-    <select id="findUserByName" parameterType="java.lang.String" resultType="user">
+    <select id="findUserByName" parameterType="java.lang.String" resultType="User">
         select * from user where username like '%${value}%';
     </select>
 <!--    添加用户
     parameterType：指定输入参数类型是pojo（包括用户信息）
     #{}中指定pojo的属性名，接收到pojo对象的属性值，mybatis通过OGNL获取对象的属性值
         -->
-    <insert id="insertUser" parameterType="user">
+    <insert id="insertUser" parameterType="User">
 --         将插入数据的主键返回，返回到user对象中
 --         select LAST_INSERT_ID()：得到刚insert进去记录的主键值，只适用于自增主键
 --         keyProperty：将查询到主键值设置到parameterType指定的对象的哪个属性
@@ -68,12 +112,12 @@ ${value}：接收输入参数的内容，如果传入类型是简单类型，${}
     需要传入用户的id
     需要传入用户的更新信息
     parameterType指定user对象，包括id和更新信息，注意：id必须存在-->
-    <update id="updateUser" parameterType="user">
+    <update id="updateUser" parameterType="User">
         update user set username = #{username}, birthday = #{birthday}, sex = #{sex}, address = #{address} where id = #{id}
     </update>
 
 <!--    传递pojo对象总和查询用户信息-->
-    <select id="findUserByUser" parameterType="user" resultType="user">
+    <select id="findUserByUser" parameterType="User" resultType="User">
         select * from user where id=#{id} and username like '%${username}%'
     </select>
 

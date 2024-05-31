@@ -28,6 +28,12 @@ public interface UserMapper {
 
     //用户信息综合查询
     public List<UserCustom> findUserList(UserQueryVo userQueryVo) throws Exception;
+
+    //用户信息个数综合查询
+    public int findUserCount(UserQueryVo userQueryVo) throws Exception;
+
+    //resultMap映射方法测试
+    public User findUserByIdResultMap(int id) throws Exception;
 }
 
 
