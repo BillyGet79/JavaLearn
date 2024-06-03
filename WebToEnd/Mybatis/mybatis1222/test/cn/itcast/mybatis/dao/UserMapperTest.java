@@ -12,6 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -85,8 +86,14 @@ public class UserMapperTest {
         UserQueryVo userQueryVo = new UserQueryVo();
         userQueryVo.setUserCustom(new UserCustom());
         //由于这里使用了动态sql，如果某个值没有添加，则sql不会拼接进去
-        userQueryVo.getUserCustom().setSex("1");
+//        userQueryVo.getUserCustom().setSex("1");
 //        userQueryVo.getUserCustom().setUsername("张三");
+        //传入多个id
+        List<Integer> ids = new ArrayList<>();
+        ids.add(1);
+        ids.add(10);
+        ids.add(16);
+        userQueryVo.setIds(ids);
         List<UserCustom> list = userMapper.findUserList(userQueryVo);
         sqlSession.close();
         System.out.println(list);
