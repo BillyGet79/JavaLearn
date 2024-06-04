@@ -3,6 +3,7 @@ package cn.itcast.mybatis.dao;
 import cn.itcast.mybatis.mapper.OrdersMapperCustom;
 import cn.itcast.mybatis.po.Orders;
 import cn.itcast.mybatis.po.OrdersCustom;
+import cn.itcast.mybatis.po.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -38,6 +39,24 @@ public class OrdersMapperCustomTest {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         OrdersMapperCustom ordersMapperCustom = sqlSession.getMapper(OrdersMapperCustom.class);
         List<Orders> list = ordersMapperCustom.findOrdersUserResultMap();
+        sqlSession.close();
+        System.out.println(list);
+    }
+
+    @Test
+    public void testFindOrdersAndOrderDetailsResultMap() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        OrdersMapperCustom ordersMapperCustom = sqlSession.getMapper(OrdersMapperCustom.class);
+        List<Orders> list = ordersMapperCustom.findOrdersAndOrderDetailsResultMap();
+        sqlSession.close();
+        System.out.println(list);
+    }
+
+    @Test
+    public void testFindUsersAndUserItemsResultMap() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        OrdersMapperCustom ordersMapperCustom = sqlSession.getMapper(OrdersMapperCustom.class);
+        List<User> list = ordersMapperCustom.findUsersAndUserItemsResultMap();
         sqlSession.close();
         System.out.println(list);
     }
