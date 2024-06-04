@@ -1,6 +1,7 @@
 package cn.itcast.mybatis.po;
 
 import java.util.Date;
+import java.util.List;
 
 public class User {
     //属性名和数据库表的字段对应
@@ -9,6 +10,9 @@ public class User {
     private String sex;
     private Date birthday;
     private String address;
+
+    //保存用户购买的商品信息
+    private List<Orders> ordersList;
 
     public User() {
     }
@@ -28,6 +32,7 @@ public class User {
                 ", sex='" + sex + '\'' +
                 ", birthday=" + birthday +
                 ", address='" + address + '\'' +
+                ", ordersList=" + ordersList +
                 '}';
     }
 
@@ -69,5 +74,13 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public List<Orders> getOrdersList() {
+        return ordersList;
+    }
+
+    public void setOrdersList(List<Orders> ordersList) {
+        this.ordersList = ordersList;
     }
 }
