@@ -60,4 +60,20 @@ public class OrdersMapperCustomTest {
         sqlSession.close();
         System.out.println(list);
     }
+
+    @Test
+    public void testFindOrdersUserLazyLoading() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        OrdersMapperCustom ordersMapperCustom = sqlSession.getMapper(OrdersMapperCustom.class);
+        //查询订单信息（单表）
+        List<Orders> list = ordersMapperCustom.findOrdersUserLazyLoading();
+
+        //遍历上边的订单列表
+        for (Orders orders : list) {
+            //执行getUser()去查询用户信息，这里实现按需加载
+            User user = orders.getUser();
+            System.out.println(user);
+        }
+        sqlSession.close();
+    }
 }
