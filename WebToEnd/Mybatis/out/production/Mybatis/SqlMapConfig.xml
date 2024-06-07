@@ -9,9 +9,12 @@
 <!--        <property name="" value=""/>-->
     </properties>
 <!--    全局配置参数-->
-<!--    <settings>-->
-<!--        <setting name="" value=""/>-->
-<!--    </settings>-->
+    <settings>
+<!--        打开延迟加载开关-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+<!--        设置积极加载改为消极加载即按需加载-->
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
 <!--    别名定义-->
     <typeAliases>
 <!--        针对单个别名的定义-->
