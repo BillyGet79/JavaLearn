@@ -1,6 +1,7 @@
 package cn.itcast.mybatis.dao;
 
 import cn.itcast.mybatis.mapper.OrdersMapperCustom;
+import cn.itcast.mybatis.mapper.UserMapper;
 import cn.itcast.mybatis.po.Orders;
 import cn.itcast.mybatis.po.OrdersCustom;
 import cn.itcast.mybatis.po.User;
@@ -74,6 +75,32 @@ public class OrdersMapperCustomTest {
             User user = orders.getUser();
             System.out.println(user);
         }
+        sqlSession.close();
+    }
+
+    /**
+     * 一级缓存测试
+     */
+    @Test
+    public void testCache1() throws Exception {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+
+        //下边查询使用一个sqlSession
+        //第一次发起请求，查询id为1的用户
+        User user1 = userMapper.findUserById(1);
+        System.out.println(user1);
+
+        //更新user1的信息，去清空缓存
+        user1.setUsername("测试用户");
+        userMapper.updateUser(user1);
+        //执行commit之后才会清空缓存
+        sqlSession.commit();
+
+        //第二次发起请求，查询id为1的用户
+        User user2 = userMapper.findUserById(1);
+        System.out.println(user2);
+
         sqlSession.close();
     }
 }
