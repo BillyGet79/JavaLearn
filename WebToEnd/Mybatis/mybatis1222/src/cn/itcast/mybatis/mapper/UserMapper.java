@@ -34,6 +34,9 @@ public interface UserMapper {
 
     //resultMap映射方法测试
     public User findUserByIdResultMap(int id) throws Exception;
+
+    //更新用户
+    public void updateUser(User user) throws Exception;
 }
 
 
