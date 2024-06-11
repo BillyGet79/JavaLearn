@@ -103,4 +103,38 @@ public class OrdersMapperCustomTest {
 
         sqlSession.close();
     }
+
+    /**
+     * 二级缓存测试
+     */
+    @Test
+    public void testCache2() throws Exception {
+        SqlSession sqlSession1 = sqlSessionFactory.openSession();
+        SqlSession sqlSession2 = sqlSessionFactory.openSession();
+        SqlSession sqlSession3 = sqlSessionFactory.openSession();
+        UserMapper userMapper1 = sqlSession1.getMapper(UserMapper.class);
+        UserMapper userMapper2 = sqlSession2.getMapper(UserMapper.class);
+        UserMapper userMapper3 = sqlSession3.getMapper(UserMapper.class);
+
+        //下边查询使用一个sqlSession
+        //第一次发起请求，查询id为1的用户
+        User user1 = userMapper1.findUserById(1);
+        System.out.println(user1);
+        //这里执行关闭操作，将sqlSession中的数据写到二级缓存区域
+        sqlSession1.close();
+
+        //使用sqlSession3执行commit()操作
+        User user3 = userMapper3.findUserById(1);
+        user3.setUsername("张明明");
+        userMapper3.updateUser(user3);
+        //执行提交，清空UserMapper下的二级缓存
+        sqlSession3.commit();
+        sqlSession3.close();
+
+        //第二次发起请求，查询id为1的用户
+        User user2 = userMapper2.findUserById(1);
+        System.out.println(user2);
+        sqlSession2.close();
+    }
+
 }
