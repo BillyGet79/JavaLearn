@@ -4,42 +4,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6a12e51-daf2-4792-8409-52b5577f4fd4" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/.idea/Spring.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/src/main/java/com/itheima/AppForName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/src/main/java/com/itheima/AppForScope.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/src/main/java/com/itheima/dao/BookDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/src/main/java/com/itheima/dao/impl/BookDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/src/main/java/com/itheima/service/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/src/main/java/com/itheima/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_02_base_config/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/AppForInstanceBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/AppForInstanceOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/AppForInstanceUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/dao/BookDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/dao/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/dao/impl/BookDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/dao/impl/OrderDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/factory/OrderDaoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/factory/UserDaoFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/factory/UserDaoFactoryBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spring_01_quickstart/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring_01_quickstart/.idea/material_theme_project_new.xml" afterDir="false" />
+    <list default="true" id="e6a12e51-daf2-4792-8409-52b5577f4fd4" name="更改" comment="Spring学习">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_04_bean_lifecycle/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_04_bean_lifecycle/src/main/java/com/itheima/AppForLifeCycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_04_bean_lifecycle/src/main/java/com/itheima/dao/BookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_04_bean_lifecycle/src/main/java/com/itheima/dao/impl/BookDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_04_bean_lifecycle/src/main/java/com/itheima/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_04_bean_lifecycle/src/main/java/com/itheima/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_04_bean_lifecycle/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_05_di_set/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_05_di_set/src/main/java/com/itheima/AppForDISet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_05_di_set/src/main/java/com/itheima/dao/BookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_05_di_set/src/main/java/com/itheima/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_05_di_set/src/main/java/com/itheima/dao/impl/BookDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_05_di_set/src/main/java/com/itheima/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_05_di_set/src/main/java/com/itheima/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_05_di_set/src/main/java/com/itheima/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_05_di_set/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_06_di_constructor/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_06_di_constructor/src/main/java/com/itheima/AppForDIConstructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_06_di_constructor/src/main/java/com/itheima/dao/BookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_06_di_constructor/src/main/java/com/itheima/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_06_di_constructor/src/main/java/com/itheima/dao/impl/BookDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_06_di_constructor/src/main/java/com/itheima/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_06_di_constructor/src/main/java/com/itheima/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_06_di_constructor/src/main/java/com/itheima/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_06_di_constructor/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_07_di_autoware/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_07_di_autoware/src/main/java/com/itheima/AppForDiAutoware.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_07_di_autoware/src/main/java/com/itheima/dao/BookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_07_di_autoware/src/main/java/com/itheima/dao/impl/BookDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_07_di_autoware/src/main/java/com/itheima/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_07_di_autoware/src/main/java/com/itheima/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_07_di_autoware/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_08_di_collection/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_08_di_collection/src/main/java/com/itheima/AppForDiCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_08_di_collection/src/main/java/com/itheima/dao/BookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_08_di_collection/src/main/java/com/itheima/dao/impl/BookDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_08_di_collection/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_08_di_collection/target/classes/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_08_di_collection/target/classes/com/itheima/dao/BookDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_08_di_collection/target/classes/com/itheima/dao/impl/BookDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_09_datasource/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_09_datasource/src/main/java/com/itheima/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_09_datasource/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_09_datasource/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/AppForInstanceUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/AppForInstanceUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/factory/UserDaoFactoryBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/java/com/itheima/factory/UserDaoFactoryBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_03_bean_instance/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_03_bean_instance/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_03_bean_instance/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_03_bean_instance/target/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_03_bean_instance/target/classes/com/itheima/AppForInstanceUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring_03_bean_instance/target/classes/com/itheima/AppForInstanceUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring_03_bean_instance/target/classes/com/itheima/factory/UserDaoFactoryBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/spring_03_bean_instance/target/classes/com/itheima/factory/UserDaoFactoryBean.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +73,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -71,11 +95,14 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.AppForDISet.executor": "Run",
+    "Application.AppForDiAutoware.executor": "Run",
+    "Application.AppForInstanceOrder.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/JavaLearn/WebToEnd/Spring/spring_03_bean_instance/src/main/resources",
+    "last_opened_file_path": "D:/JavaLearn/WebToEnd/Spring/spring_08_di_collection/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,22 +113,54 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "terminal",
     "vue.rearranger.settings.migration": "true",
+    "应用程序.App.executor": "Run",
+    "应用程序.AppForDiCollection.executor": "Run",
     "应用程序.AppForInstanceBook.executor": "Run",
+    "应用程序.AppForInstanceUser.executor": "Run",
+    "应用程序.AppForLifeCycle.executor": "Run",
     "应用程序.AppForName.executor": "Run",
     "应用程序.AppForScope.executor": "Run"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JavaLearn\WebToEnd\Spring\spring_03_bean_instance\src\main\resources" />
-      <recent name="D:\JavaLearn\WebToEnd\Spring\spring_03_bean_instance\src\main\java" />
-      <recent name="D:\JavaLearn\WebToEnd\Spring\spring_02_base_config\src\main\java" />
+      <recent name="D:\JavaLearn\WebToEnd\Spring\spring_08_di_collection\src\main\resources" />
+      <recent name="D:\JavaLearn\WebToEnd\Spring\spring_08_di_collection\src\main\java" />
+      <recent name="D:\JavaLearn\WebToEnd\Spring" />
+      <recent name="D:\JavaLearn\WebToEnd\Spring\spring_07_di_autoware\src\main\resources" />
+      <recent name="D:\JavaLearn\WebToEnd\Spring\spring_07_di_autoware\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JavaLearn\WebToEnd\Spring\spring_02_base_config" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AppForInstanceOrder">
+  <component name="RunManager" selected="应用程序.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itheima.App" />
+      <module name="spring_09_datasource" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppForDiCollection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itheima.AppForDiCollection" />
+      <module name="spring_08_di_collection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itheima.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppForInstanceBook" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.itheima.AppForInstanceBook" />
       <module name="spring_03_bean_instance" />
@@ -115,8 +174,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppForInstanceOrder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itheima.AppForInstanceOrder" />
+    <configuration name="AppForInstanceUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itheima.AppForInstanceUser" />
       <module name="spring_03_bean_instance" />
       <extension name="coverage">
         <pattern>
@@ -128,22 +187,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppForName" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itheima.AppForName" />
-      <module name="spring_02_base_config" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itheima.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppForScope" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itheima.AppForScope" />
-      <module name="spring_02_base_config" />
+    <configuration name="AppForLifeCycle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itheima.AppForLifeCycle" />
+      <module name="spring_04_bean_lifecycle" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.itheima.*" />
@@ -156,10 +202,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AppForInstanceOrder" />
-        <item itemvalue="应用程序.AppForInstanceBook" />
-        <item itemvalue="应用程序.AppForScope" />
-        <item itemvalue="应用程序.AppForName" />
+        <item itemvalue="应用程序.App" />
+        <item itemvalue="应用程序.AppForDiCollection" />
       </list>
     </recent_temporary>
   </component>
@@ -179,15 +223,40 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718157174866</updated>
-      <workItem from="1718157175931" duration="5165000" />
+      <workItem from="1718157175931" duration="5493000" />
+      <workItem from="1718240315791" duration="9286000" />
+      <workItem from="1718255677490" duration="2775000" />
+      <workItem from="1718280458085" duration="4058000" />
     </task>
+    <task id="LOCAL-00001" summary="Spring学习">
+      <option name="closed" value="true" />
+      <created>1718184077595</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718184077595</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Spring学习" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring学习" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

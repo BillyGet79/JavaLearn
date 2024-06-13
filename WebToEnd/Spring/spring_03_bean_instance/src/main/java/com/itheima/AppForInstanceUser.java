@@ -1,9 +1,6 @@
 package com.itheima;
 
-import com.itheima.dao.OrderDao;
 import com.itheima.dao.UserDao;
-import com.itheima.factory.OrderDaoFactory;
-import com.itheima.factory.UserDaoFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -16,6 +13,8 @@ public class AppForInstanceUser {
 //        userDao.save();
 
 
+        //在执行这一段语句之后，applicationContext.xml中定义的所有的bean都会实例化，所以所有的bean都会调用构造函数
+        //这就是为什么在xml中没有注释掉的其他bean会调用构造函数，导致有额外输出的原因
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         UserDao userDao1 = (UserDao) ctx.getBean("userDao");

@@ -14,4 +14,8 @@ public class UserDaoFactoryBean implements FactoryBean<UserDao> {
         return UserDao.class;
     }
 
+    @Override
+    public boolean isSingleton() {
+        return true;
+    }
 }
