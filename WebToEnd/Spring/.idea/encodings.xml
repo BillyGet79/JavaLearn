@@ -5,5 +5,17 @@
     <file url="file://$PROJECT_DIR$/Spring_01_quickstart/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring_03_bean_instance/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring_03_bean_instance/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_04_bean_lifecycle/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_04_bean_lifecycle/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_05_di_set/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_05_di_set/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_06_di_constructor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_06_di_constructor/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_07_di_autoware/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_07_di_autoware/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_08_di_collection/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_08_di_collection/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_09_datasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_09_datasource/src/main/resources" charset="UTF-8" />
   </component>
 </project>
