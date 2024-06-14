@@ -2,15 +2,22 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
-
-    <context:property-placeholder location="jdbc.properties"/>
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           https://www.springframework.org/schema/context/spring-context.xsd">
+<!--    管理DruidDataSource对象-->
+<!--    开启context命名空间-->
+    <!--    使用context空间加载properties文件-->
+    <context:property-placeholder location="classpath:*.properties"/>
+<!--    使用属性占位符${}读取properties文件中的属性-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="${jdbc.driver}"/>
         <property name="url" value="${jdbc.url}"/>
         <property name="username" value="${jdbc.username}"/>
         <property name="password" value="${jdbc.password}"/>
     </bean>
+
 <!--    <bean id="dataSource2" class="com.mchange.v2.c3p0.ComboPooledDataSource">-->
 <!--        <property name="driverClass" value="com.mysql.jdbc.Driver"/>-->
 <!--        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/spring_db"/>-->
@@ -18,4 +25,8 @@
 <!--        <property name="password" value="123456"/>-->
 <!--        <property name="maxPoolSize" value="1000"/>-->
 <!--    </bean>-->
+
+    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl">
+        <property name="name" value="${jdbc.driver}"/>
+    </bean>
 </beans>
