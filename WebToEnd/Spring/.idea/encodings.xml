@@ -17,5 +17,17 @@
     <file url="file://$PROJECT_DIR$/spring_08_di_collection/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring_09_datasource/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring_09_datasource/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_10_container/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_10_container/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_11_annotation_bean/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_11_annotation_bean/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_12_annotation_bean_manager/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_12_annotation_bean_manager/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_13_annotation_di/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_13_annotation_di/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_14_annotation_third_bean_manager/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_14_annotation_third_bean_manager/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_15_spring_mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_15_spring_mybatis/src/main/resources" charset="UTF-8" />
   </component>
 </project>
