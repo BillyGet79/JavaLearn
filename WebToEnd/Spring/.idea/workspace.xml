@@ -5,58 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6a12e51-daf2-4792-8409-52b5577f4fd4" name="更改" comment="Spring学习">
-      <change afterPath="$PROJECT_DIR$/spring_19_aop_pointcut/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_19_aop_pointcut/src/main/java/com/itheima/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_19_aop_pointcut/src/main/java/com/itheima/aop/MyAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_19_aop_pointcut/src/main/java/com/itheima/config/SpringConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_19_aop_pointcut/src/main/java/com/itheima/dao/BookDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_19_aop_pointcut/src/main/java/com/itheima/dao/impl/BookDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_20_aop_advice_type/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_20_aop_advice_type/src/main/java/com/itheima/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_20_aop_advice_type/src/main/java/com/itheima/aop/MyAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_20_aop_advice_type/src/main/java/com/itheima/config/SpringConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_20_aop_advice_type/src/main/java/com/itheima/dao/BookDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_20_aop_advice_type/src/main/java/com/itheima/dao/impl/BookDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_21_case_interface_run_speed/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_21_case_interface_run_speed/src/main/java/com/itheima/aop/ProjectAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_21_case_interface_run_speed/src/main/java/com/itheima/config/JdbcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_21_case_interface_run_speed/src/main/java/com/itheima/config/MybatisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_21_case_interface_run_speed/src/main/java/com/itheima/config/SpringConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_21_case_interface_run_speed/src/main/java/com/itheima/dao/AccountDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_21_case_interface_run_speed/src/main/java/com/itheima/domain/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_21_case_interface_run_speed/src/main/java/com/itheima/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_21_case_interface_run_speed/src/main/java/com/itheima/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_21_case_interface_run_speed/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_21_case_interface_run_speed/src/test/java/com/itheima/service/AccountServiceTestCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_22_aop_advice_data/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_22_aop_advice_data/src/main/java/com/itheima/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_22_aop_advice_data/src/main/java/com/itheima/aop/MyAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_22_aop_advice_data/src/main/java/com/itheima/config/SpringConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_22_aop_advice_data/src/main/java/com/itheima/dao/BookDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_22_aop_advice_data/src/main/java/com/itheima/dao/impl/BookDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_23_case_handle_password/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_23_case_handle_password/src/main/java/com/itheima/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_23_case_handle_password/src/main/java/com/itheima/aop/DataAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_23_case_handle_password/src/main/java/com/itheima/config/SpringConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_23_case_handle_password/src/main/java/com/itheima/dao/ResourcesDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_23_case_handle_password/src/main/java/com/itheima/dao/impl/ResourcesDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_23_case_handle_password/src/main/java/com/itheima/service/ResourcesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_23_case_handle_password/src/main/java/com/itheima/service/impl/ResourcesServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_24_case_transfer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_24_case_transfer/src/main/java/com/itheima/config/JdbcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_24_case_transfer/src/main/java/com/itheima/config/MybatisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_24_case_transfer/src/main/java/com/itheima/config/SpringConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_24_case_transfer/src/main/java/com/itheima/dao/AccountDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_24_case_transfer/src/main/java/com/itheima/domain/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_24_case_transfer/src/main/java/com/itheima/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_24_case_transfer/src/main/java/com/itheima/service/impl/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_24_case_transfer/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_24_case_transfer/src/test/java/com/itheima/service/AccountServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/src/main/java/com/itheima/config/JdbcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/src/main/java/com/itheima/config/MybatisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/src/main/java/com/itheima/config/SpringConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/src/main/java/com/itheima/dao/AccountDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/src/main/java/com/itheima/domain/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/src/main/java/com/itheima/service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/src/main/java/com/itheima/service/impl/AccountServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/src/main/resources/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/src/test/java/com/itheima/service/AccountServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/target/classes/com/itheima/config/JdbcConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/target/classes/com/itheima/config/MybatisConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/target/classes/com/itheima/config/SpringConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/target/classes/com/itheima/dao/AccountDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/target/classes/com/itheima/domain/Account.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/target/classes/com/itheima/service/AccountService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/target/classes/com/itheima/service/impl/AccountServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/target/classes/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring_25_case_transfer_log/target/test-classes/com/itheima/service/AccountServiceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,65 +61,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.App (1).executor": "Run",
-    "Application.App (2).executor": "Run",
-    "Application.App.executor": "Run",
-    "Application.App2 (1).executor": "Run",
-    "Application.App2.executor": "Run",
-    "Application.AppForDISet.executor": "Run",
-    "Application.AppForDiAutoware.executor": "Run",
-    "Application.AppForInstanceOrder.executor": "Run",
-    "JUnit.AccountServiceTest.testFindAll.executor": "Run",
-    "JUnit.AccountServiceTest.testFindById.executor": "Run",
-    "JUnit.AccountServiceTest.testTransfer.executor": "Run",
-    "JUnit.AccountServiceTestCase.executor": "Run",
-    "JUnit.AccountServiceTestCase.testFindAll.executor": "Run",
-    "JUnit.AccountServiceTestCase.testFindById.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/JavaLearn/WebToEnd/Spring/spring_24_case_transfer/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "terminal",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.App (1).executor": "Run",
-    "应用程序.App (2).executor": "Run",
-    "应用程序.App (3).executor": "Run",
-    "应用程序.App (4).executor": "Run",
-    "应用程序.App.executor": "Run",
-    "应用程序.AppForAnnotation.executor": "Run",
-    "应用程序.AppForDiCollection.executor": "Run",
-    "应用程序.AppForInstanceBook.executor": "Run",
-    "应用程序.AppForInstanceUser.executor": "Run",
-    "应用程序.AppForLifeCycle.executor": "Run",
-    "应用程序.AppForName.executor": "Run",
-    "应用程序.AppForScope.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.App (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.App (2).executor&quot;: &quot;Run&quot;,
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.App2 (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.App2.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AppForDISet.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AppForDiAutoware.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AppForInstanceOrder.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AccountServiceTest.testFindAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AccountServiceTest.testFindById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AccountServiceTest.testTransfer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AccountServiceTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AccountServiceTestCase.testFindAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AccountServiceTestCase.testFindById.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JavaLearn/WebToEnd/Spring/spring_25_case_transfer_log&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.App (1).executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.App (2).executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.App (3).executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.App (4).executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.App.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.AppForAnnotation.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.AppForDiCollection.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.AppForInstanceBook.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.AppForInstanceUser.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.AppForLifeCycle.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.AppForName.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.AppForScope.executor&quot;: &quot;Run&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaLearn\WebToEnd\Spring" />
       <recent name="D:\JavaLearn\WebToEnd\Spring\spring_24_case_transfer\src\main\resources" />
       <recent name="D:\JavaLearn\WebToEnd\Spring\spring_21_case_interface_run_speed\src\main\resources" />
       <recent name="D:\JavaLearn\WebToEnd\Spring\spring_21_case_interface_run_speed\src\main\java" />
       <recent name="D:\JavaLearn\WebToEnd\Spring\spring_19_aop_pointcut\src\main\java" />
-      <recent name="D:\JavaLearn\WebToEnd\Spring\spring_17_aop_demo\src\main\java\com\itheima\aop" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JavaLearn\WebToEnd\Spring\spring_02_base_config" />
@@ -238,8 +206,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AccountServiceTest.testTransfer" />
-        <item itemvalue="Application.App (1)" />
-        <item itemvalue="Application.App (2)" />
         <item itemvalue="JUnit.AccountServiceTestCase" />
         <item itemvalue="JUnit.AccountServiceTestCase.testFindById" />
       </list>
@@ -271,7 +237,9 @@
       <workItem from="1718433316238" duration="3970000" />
       <workItem from="1718584205424" duration="7182000" />
       <workItem from="1718594023960" duration="50000" />
-      <workItem from="1718594080939" duration="9948000" />
+      <workItem from="1718594080939" duration="11366000" />
+      <workItem from="1718670035154" duration="930000" />
+      <workItem from="1718671004572" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="Spring学习">
       <option name="closed" value="true" />
@@ -305,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718442781493</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Spring学习">
+      <option name="closed" value="true" />
+      <created>1718631486363</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718631486363</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
