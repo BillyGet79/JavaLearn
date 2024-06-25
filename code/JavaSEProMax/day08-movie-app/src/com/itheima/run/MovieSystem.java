@@ -109,8 +109,10 @@ public class MovieSystem {
                     login();
                     break;
                 case "2":
+                    CustomerRegister();
                     break;
                 case "3":
+                    BusinessRegister();
                     break;
                 default:
                     System.out.println("命令有误，请确认！");
@@ -151,6 +153,145 @@ public class MovieSystem {
             System.out.println("登录名称错误，请确认");
         }
     }
+
+    /**
+     * 用户注册
+     */
+    private static void CustomerRegister() {
+        System.out.println("请您输入注册的登录名称：");
+        String loginName = SYS_SC.nextLine();
+        System.out.println("请您输入注册的用户名");
+        String userName = SYS_SC.nextLine();
+        System.out.println("请您输入性别：");
+        char sex = SYS_SC.nextLine().toCharArray()[0];
+        System.out.println("请您输入电话：");
+        String phone = SYS_SC.nextLine();
+        System.out.println("请您输入用户金额");
+        double money = SYS_SC.nextDouble();
+        //用一个输入来吸收上面的换行
+        SYS_SC.nextLine();
+        System.out.println("请您输入注册密码：");
+        String registerPassword = SYS_SC.nextLine();
+        System.out.println("请确认密码：");
+        String nextPassword = SYS_SC.nextLine();
+        if (!registerPassword.equals(nextPassword)) {
+            //两次密码不一致的情况
+            System.out.println("两次密码不一致！");
+            System.out.println("是否继续注册？(y/n)");
+            String ans = SYS_SC.nextLine();
+            if (ans.equals("y")) {
+                CustomerRegister();
+            } else if (ans.equals("n")){
+                showMain();
+            } else {
+                System.out.println("非法输入，跳转到初始界面");
+                showMain();
+            }
+        } else {
+            //两次密码一致的情况
+            //首先检查这个用户是否存在
+            ALL_USERS.forEach(user -> {
+                if (user.getLoginName().equals(loginName)) {
+                    System.out.println("这个用户已经存在！");
+                    System.out.println("是否继续注册？(y/n)");
+                    String ans = SYS_SC.nextLine();
+                    if (ans.equals("y")) {
+                        CustomerRegister();
+                    } else if (ans.equals("n")){
+                        showMain();
+                    } else {
+                        System.out.println("非法输入，跳转到初始界面");
+                        showMain();
+                    }
+                }
+            });
+            //到这里就没有重复用户了，这个时候开始添加用户
+            User newUser = new Customer();
+            newUser.setLoginName(loginName);
+            newUser.setUserName(userName);
+            newUser.setPhone(phone);
+            newUser.setSex(sex);
+            newUser.setPassWord(registerPassword);
+            newUser.setMoney(money);
+            ALL_USERS.add(newUser);
+            System.out.println("注册成功！");
+            showMain();
+        }
+    }
+
+    /**
+     * 商家注册
+     */
+    private static void BusinessRegister() {
+        System.out.println("请您输入注册的登录名称：");
+        String loginName = SYS_SC.nextLine();
+        System.out.println("请您输入注册的用户名");
+        String userName = SYS_SC.nextLine();
+        System.out.println("请您输入性别：");
+        char sex = SYS_SC.nextLine().toCharArray()[0];
+        System.out.println("请您输入电话：");
+        String phone = SYS_SC.nextLine();
+        System.out.println("请您输入用户金额");
+        double money = SYS_SC.nextDouble();
+        //用一个输入来吸收上面的换行
+        SYS_SC.nextLine();
+        System.out.println("请您输入商店名称：");
+        String shopName = SYS_SC.nextLine();
+        System.out.println("请您输入商店地址：");
+        String address = SYS_SC.nextLine();
+        System.out.println("请您输入注册密码：");
+        String registerPassword = SYS_SC.nextLine();
+        System.out.println("请确认密码：");
+        String nextPassword = SYS_SC.nextLine();
+        if (!registerPassword.equals(nextPassword)) {
+            //两次密码不一致的情况
+            System.out.println("两次密码不一致！");
+            System.out.println("是否继续注册？(y/n)");
+            String ans = SYS_SC.nextLine();
+            if (ans.equals("y")) {
+                CustomerRegister();
+            } else if (ans.equals("n")){
+                showMain();
+            } else {
+                System.out.println("非法输入，跳转到初始界面");
+                showMain();
+            }
+        } else {
+            //两次密码一致的情况
+            //首先检查这个用户是否存在
+            ALL_USERS.forEach(user -> {
+                if (user.getLoginName().equals(loginName)) {
+                    System.out.println("这个用户已经存在！");
+                    System.out.println("是否继续注册？(y/n)");
+                    String ans = SYS_SC.nextLine();
+                    if (ans.equals("y")) {
+                        CustomerRegister();
+                    } else if (ans.equals("n")){
+                        showMain();
+                    } else {
+                        System.out.println("非法输入，跳转到初始界面");
+                        showMain();
+                    }
+                }
+            });
+            //到这里就没有重复用户了，这个时候开始添加用户
+            Business newUser = new Business();
+            newUser.setLoginName(loginName);
+            newUser.setUserName(userName);
+            newUser.setPhone(phone);
+            newUser.setSex(sex);
+            newUser.setPassWord(registerPassword);
+            newUser.setMoney(money);
+            newUser.setShopName(shopName);
+            newUser.setAddress(address);
+            ALL_USERS.add(newUser);
+            List<Movie> movies = new ArrayList<>();
+            ALL_MOVIES.put(newUser , movies);
+            System.out.println("注册成功！");
+            showMain();
+        }
+    }
+
 
     private static void showBusinessMain() {
         while (true) {
@@ -381,7 +522,8 @@ public class MovieSystem {
                     showAllMovies();
                     break;
                 case "2":
-
+                    //根据电影名称查询电影信息
+                    queryMovie();
                     break;
                 case "3":
                     //评分功能
@@ -397,6 +539,44 @@ public class MovieSystem {
                     break;
             }
         }
+    }
+
+    /**
+     * 根据电影名称查询电影信息
+     */
+    private static void queryMovie() {
+        System.out.println("请输入你要查询的电影信息（可以是电影的关键字）:");
+        String queryName = SYS_SC.nextLine();
+        //用一个哈希表来保存查询的结果
+        //Movie表示电影，String表示电影所属商家
+        Map<String, List<String>> ans = new HashMap<>();
+        //遍历ALL_MOVIES的map
+        ALL_MOVIES.forEach((business, movies) -> {
+            //对当下的movies进行遍历
+            movies.forEach(movie -> {
+                if (movie.getName().contains(queryName)) {
+                    //先判断是否添加商家
+                    if (!ans.containsKey(business.getShopName())) {
+                        ans.put(business.getShopName(), new ArrayList<>());
+                    }
+                    ans.get(business.getShopName()).add(movie.getName());
+                }
+            });
+        });
+        //输出查询到的电影及其所属商家
+        if (ans.isEmpty()) {
+            System.out.println("未查询到结果!");
+        } else {
+            ans.forEach((businessName, moviesName) -> {
+                System.out.print("商家：" + businessName + "\t");
+                System.out.print("电影：");
+                moviesName.forEach(movieName -> {
+                    System.out.print(movieName + " ");
+                });
+                System.out.println();
+            });
+        }
+        showCustomerMain();
     }
 
     /**
