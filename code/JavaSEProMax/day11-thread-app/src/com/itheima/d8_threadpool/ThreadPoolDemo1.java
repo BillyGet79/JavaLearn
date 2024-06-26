@@ -35,7 +35,6 @@ public class ThreadPoolDemo1 {
         pool.execute(target);
         pool.execute(target);
         //不创建，拒绝策略被触发
-        //pool.execute(target);
 
         //关闭线程池（开发中一般不会使用）
         //pool.shutdownNow(); //立即关闭，即使任务没有完成，会丢失任务的！
