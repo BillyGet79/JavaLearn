@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ad89485-28c9-45f5-bbde-54dcbf512649" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SpringMVC.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvc_01_quickstart/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvc_01_quickstart/src/main/java/com/itheima/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvc_01_quickstart/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvc_01_quickstart/src/main/webapp/index.jsp" afterDir="false" />
+    <list default="true" id="3ad89485-28c9-45f5-bbde-54dcbf512649" name="更改" comment="SpringMVC学习">
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../code/JavaSEProMax/day11-thread-app/src/com/itheima/d8_threadpool/ThreadPoolDemo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../code/JavaSEProMax/day11-thread-app/src/com/itheima/d8_threadpool/ThreadPoolDemo1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../思维导图/Web前端.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/../../思维导图/Web前端.xmind" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../思维导图/Web后端开发.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/../../思维导图/Web后端开发.xmind" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,10 +26,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2i5I0AqwWHRHC7Q6CCNMmkO3vow" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -50,6 +42,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/JavaLearn/WebToEnd/SpringMVC",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,11 +70,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718773786853</updated>
-      <workItem from="1718773787817" duration="2566000" />
+      <workItem from="1718773787817" duration="2678000" />
+      <workItem from="1719313809235" duration="28000" />
+      <workItem from="1719372851074" duration="1883000" />
     </task>
+    <task id="LOCAL-00001" summary="SpringMVC学习">
+      <option name="closed" value="true" />
+      <created>1718792387757</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718792387757</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="SpringMVC学习" />
+    <option name="LAST_COMMIT_MESSAGE" value="SpringMVC学习" />
   </component>
 </project>
