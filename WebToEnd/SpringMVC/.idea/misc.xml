@@ -7,7 +7,18 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc_01_quickstart/pom.xml" />
         <option value="$PROJECT_DIR$/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_01_quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_02_bean_load/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_03_request_mapping/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_04_request_param/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_05_response/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_06_rest/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/spring_01_quickstart/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
