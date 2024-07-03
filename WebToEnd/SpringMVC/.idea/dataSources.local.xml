@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-241.14494.240">
-    <data-source name="@localhost" uuid="5a8028eb-bbd3-4cf4-938f-325e9386f62b">
+    <data-source name="@localhost" uuid="c8044478-6dc9-4f20-a12b-69eec7dd8822">
       <database-info product="MySQL" version="8.2.0" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="8.2.0" exact-driver-version="8.2">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
+        <jdbc-catalog-is-schema>true</jdbc-catalog-is-schema>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
@@ -13,7 +14,7 @@
         <introspection-scope>
           <node kind="schema">
             <name qname="@" />
-            <name qname="spring_db" />
+            <name qname="ssm_db" />
           </node>
         </introspection-scope>
       </schema-mapping>

@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringMVC.iml" filepath="$PROJECT_DIR$/SpringMVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_08_ssm.iml" filepath="$PROJECT_DIR$/springmvc_08_ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_09_result.iml" filepath="$PROJECT_DIR$/springmvc_09_result.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_10_exception.iml" filepath="$PROJECT_DIR$/springmvc_10_exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvc_11_page.iml" filepath="$PROJECT_DIR$/springmvc_11_page.iml" />
     </modules>
   </component>
 </project>

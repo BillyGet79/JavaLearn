@@ -15,5 +15,15 @@
     <file url="file://$PROJECT_DIR$/springmvc_05_response/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springmvc_06_rest/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springmvc_06_rest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_07_rest_case/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_07_rest_case/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_08_ssm/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_08_ssm/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_09_result/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_09_result/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_10_exception/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_10_exception/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_11_page/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc_11_page/src/main/resources" charset="UTF-8" />
   </component>
 </project>

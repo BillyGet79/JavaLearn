@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="org.springframework.beans.factory.annotation.Autowired" />
+    </list>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -13,6 +18,11 @@
         <option value="$PROJECT_DIR$/springmvc_04_request_param/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc_05_response/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc_06_rest/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_07_rest_case/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_08_ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_09_result/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_10_exception/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_11_page/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
