@@ -5,14 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af8e28cd-12b7-4cfc-9689-60cc9dbbe526" name="更改" comment="SpringMVC学习">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c8044478-6dc9-4f20-a12b-69eec7dd8822.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c8044478-6dc9-4f20-a12b-69eec7dd8822.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MavenPro/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MavenPro/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MavenPro/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MavenPro/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MavenPro/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MavenPro/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MavenPro/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MavenPro/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MavenPro/MavenPro.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MavenPro/maven_02_ssm.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MavenPro/maven_02_ssm/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MavenPro/maven_02_ssm/src/main/resources/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MavenPro/maven_02_ssm/src/test/java/com/itheima/service/BookServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvc_12_interceptor/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvc_12_interceptor/src/main/java/com/itheima/config/ServletContainerInitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvc_12_interceptor/src/main/java/com/itheima/config/SpringMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvc_12_interceptor/src/main/java/com/itheima/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvc_12_interceptor/src/main/java/com/itheima/controller/interceptor/ProjectInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvc_12_interceptor/src/main/java/com/itheima/controller/interceptor/ProjectInterceptor2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvc_12_interceptor/src/main/java/com/itheima/domain/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvc_12_interceptor/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc_11_page/src/main/java/com/itheima/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc_11_page/src/main/java/com/itheima/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc_11_page/src/main/java/com/itheima/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc_11_page/src/main/java/com/itheima/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc_11_page/src/main/webapp/pages/books.html" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc_11_page/src/main/webapp/pages/books.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc_11_page/target/classes/com/itheima/dao/BookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc_11_page/target/classes/com/itheima/dao/BookDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc_11_page/target/classes/com/itheima/service/impl/BookServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc_11_page/target/classes/com/itheima/service/impl/BookServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvc_08_ssm/src/main/webapp/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../思维导图/Web后端开发.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/../../思维导图/Web后端开发.xmind" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,49 +74,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.BookServiceTest.testGetAll.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.BookServiceTest.testGetById.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_01_quickstart [openmrs-sdk-tomcat9:run-tomcat].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_01_quickstart [org.openmrs.maven.plugins:openmrs-sdk-tomcat9-maven-plugin:5.9.0:run-tomcat].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_01_quickstart [org.opoo.maven:tomcat9-maven-plugin:3.0.1:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_01_quickstart [tomcat7:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_01_quickstart [tomcat9:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_03_request_mapping.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_04_request_param [tomcat7:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_05_response [tomcat7:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_06_rest [tomcat7:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_07_rest_case [tomcat7:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_08_ssm [tomcat7:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_09_result [tomcat7:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_10_exception [tomcat7:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.springmvc_11_page [tomcat7:run].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JavaLearn/WebToEnd/SpringMVC/springmvc_11_page&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;应用程序.App.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.BookServiceTest.testGetAll.executor": "Run",
+    "JUnit.BookServiceTest.testGetById.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.springmvc_01_quickstart [openmrs-sdk-tomcat9:run-tomcat].executor": "Run",
+    "Maven.springmvc_01_quickstart [org.openmrs.maven.plugins:openmrs-sdk-tomcat9-maven-plugin:5.9.0:run-tomcat].executor": "Run",
+    "Maven.springmvc_01_quickstart [org.opoo.maven:tomcat9-maven-plugin:3.0.1:run].executor": "Run",
+    "Maven.springmvc_01_quickstart [tomcat7:run].executor": "Run",
+    "Maven.springmvc_01_quickstart [tomcat9:run].executor": "Run",
+    "Maven.springmvc_03_request_mapping.executor": "Run",
+    "Maven.springmvc_04_request_param [tomcat7:run].executor": "Run",
+    "Maven.springmvc_05_response [tomcat7:run].executor": "Run",
+    "Maven.springmvc_06_rest [tomcat7:run].executor": "Run",
+    "Maven.springmvc_07_rest_case [tomcat7:run].executor": "Run",
+    "Maven.springmvc_08_ssm [tomcat7:run].executor": "Run",
+    "Maven.springmvc_09_result [tomcat7:run].executor": "Run",
+    "Maven.springmvc_10_exception [tomcat7:run].executor": "Run",
+    "Maven.springmvc_11_page [tomcat7:run].executor": "Run",
+    "Maven.springmvc_12_interceptor [tomcat7:run].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/JavaLearn/WebToEnd/SpringMVC",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.App.executor": "Run"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JavaLearn\WebToEnd\SpringMVC\springmvc_11_page\src\main\webapp" />
@@ -108,12 +127,13 @@
       <recent name="D:\JavaLearn\WebToEnd\SpringMVC\springmvc_10_exception\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.itheima.controller.interceptor" />
       <recent name="com.itheima.exception" />
       <recent name="com.itheima.controller" />
       <recent name="com.itheima.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.springmvc_11_page [tomcat7:run]">
+  <component name="RunManager" selected="Maven.springmvc_12_interceptor [tomcat7:run]">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.itheima.App" />
       <module name="springmvc_02_bean_load" />
@@ -459,6 +479,36 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="springmvc_12_interceptor [tomcat7:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:run" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/springmvc_12_interceptor" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="JUnit.BookServiceTest.testGetAll" />
       <item itemvalue="JUnit.BookServiceTest.testGetById" />
@@ -466,6 +516,7 @@
       <item itemvalue="Maven.springmvc_09_result [tomcat7:run]" />
       <item itemvalue="Maven.springmvc_10_exception [tomcat7:run]" />
       <item itemvalue="Maven.springmvc_11_page [tomcat7:run]" />
+      <item itemvalue="Maven.springmvc_12_interceptor [tomcat7:run]" />
       <item itemvalue="Maven.springmvc_01_quickstart [tomcat7:run]" />
       <item itemvalue="Maven.springmvc_03_request_mapping" />
       <item itemvalue="Maven.springmvc_04_request_param [tomcat7:run]" />
@@ -508,7 +559,10 @@
       <workItem from="1719966955790" duration="6985000" />
       <workItem from="1719974093801" duration="12781000" />
       <workItem from="1720050194325" duration="10446000" />
-      <workItem from="1720177922488" duration="3567000" />
+      <workItem from="1720177922488" duration="3871000" />
+      <workItem from="1720338603182" duration="4261000" />
+      <workItem from="1720515593882" duration="10000" />
+      <workItem from="1720518606239" duration="2731000" />
     </task>
     <task id="LOCAL-00001" summary="SpringMVC学习">
       <option name="closed" value="true" />
@@ -526,7 +580,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720011077564</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="SpringMVC学习">
+      <option name="closed" value="true" />
+      <created>1720185058802</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720185058802</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

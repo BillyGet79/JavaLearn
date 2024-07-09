@@ -9,6 +9,7 @@
         <module name="springmvc_05_response" />
         <module name="springmvc_07_rest_case" />
         <module name="springmvc_02_bean_load" />
+        <module name="springmvc_12_interceptor" />
         <module name="springmvc_08_ssm" />
         <module name="springmvc_09_result" />
         <module name="springmvc_11_page" />
