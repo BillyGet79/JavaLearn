@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.itheima.Springboot01QuickstartApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.511 s -- in com.itheima.Springboot01QuickstartApplicationTests

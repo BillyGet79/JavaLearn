@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.itheima.service.BookServiceTest" time="1.121" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="D:\JavaLearn\WebToEnd\MavenPro\maven_02_ssm\target\test-classes;D:\JavaLearn\WebToEnd\MavenPro\maven_02_ssm\target\classes;D:\Program Files (x86)\maven\repository\junit\junit\4.12\junit-4.12.jar;D:\Program Files (x86)\maven\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\JavaLearn\WebToEnd\MavenPro\maven_04_dao\target\maven_04_dao-1.0-SNAPSHOT.jar;D:\JavaLearn\WebToEnd\MavenPro\maven_03_pojo\target\maven_03_pojo-1.0-SNAPSHOT.jar;D:\Program Files (x86)\maven\repository\org\mybatis\mybatis\3.5.6\mybatis-3.5.6.jar;D:\Program Files (x86)\maven\repository\mysql\mysql-connector-java\5.1.47\mysql-connector-java-5.1.47.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-webmvc\5.2.10.RELEASE\spring-webmvc-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-aop\5.2.10.RELEASE\spring-aop-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-beans\5.2.10.RELEASE\spring-beans-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-context\5.2.10.RELEASE\spring-context-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-core\5.2.10.RELEASE\spring-core-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-jcl\5.2.10.RELEASE\spring-jcl-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-expression\5.2.10.RELEASE\spring-expression-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-web\5.2.10.RELEASE\spring-web-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-jdbc\5.2.10.RELEASE\spring-jdbc-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-tx\5.2.10.RELEASE\spring-tx-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-test\5.2.10.RELEASE\spring-test-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\mybatis\mybatis-spring\1.3.0\mybatis-spring-1.3.0.jar;D:\Program Files (x86)\maven\repository\com\alibaba\druid\1.1.16\druid-1.1.16.jar;D:\Program Files (x86)\maven\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;D:\Program Files (x86)\maven\repository\com\fasterxml\jackson\core\jackson-databind\2.9.0\jackson-databind-2.9.0.jar;D:\Program Files (x86)\maven\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;D:\Program Files (x86)\maven\repository\com\fasterxml\jackson\core\jackson-core\2.9.0\jackson-core-2.9.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.boot.library.path" value="C:\Users\29096\.jdks\openjdk-21.0.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\29096\AppData\Local\Temp\surefire13511981153570505192\surefirebooter-20240710141950335_3.jar C:\Users\29096\AppData\Local\Temp\surefire13511981153570505192 2024-07-10T14-19-48_637-jvmRun1 surefire-20240710141950335_1tmp surefire_0-20240710141950335_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\JavaLearn\WebToEnd\MavenPro\maven_02_ssm\target\test-classes;D:\JavaLearn\WebToEnd\MavenPro\maven_02_ssm\target\classes;D:\Program Files (x86)\maven\repository\junit\junit\4.12\junit-4.12.jar;D:\Program Files (x86)\maven\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\JavaLearn\WebToEnd\MavenPro\maven_04_dao\target\maven_04_dao-1.0-SNAPSHOT.jar;D:\JavaLearn\WebToEnd\MavenPro\maven_03_pojo\target\maven_03_pojo-1.0-SNAPSHOT.jar;D:\Program Files (x86)\maven\repository\org\mybatis\mybatis\3.5.6\mybatis-3.5.6.jar;D:\Program Files (x86)\maven\repository\mysql\mysql-connector-java\5.1.47\mysql-connector-java-5.1.47.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-webmvc\5.2.10.RELEASE\spring-webmvc-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-aop\5.2.10.RELEASE\spring-aop-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-beans\5.2.10.RELEASE\spring-beans-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-context\5.2.10.RELEASE\spring-context-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-core\5.2.10.RELEASE\spring-core-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-jcl\5.2.10.RELEASE\spring-jcl-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-expression\5.2.10.RELEASE\spring-expression-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-web\5.2.10.RELEASE\spring-web-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-jdbc\5.2.10.RELEASE\spring-jdbc-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-tx\5.2.10.RELEASE\spring-tx-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\springframework\spring-test\5.2.10.RELEASE\spring-test-5.2.10.RELEASE.jar;D:\Program Files (x86)\maven\repository\org\mybatis\mybatis-spring\1.3.0\mybatis-spring-1.3.0.jar;D:\Program Files (x86)\maven\repository\com\alibaba\druid\1.1.16\druid-1.1.16.jar;D:\Program Files (x86)\maven\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;D:\Program Files (x86)\maven\repository\com\fasterxml\jackson\core\jackson-databind\2.9.0\jackson-databind-2.9.0.jar;D:\Program Files (x86)\maven\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;D:\Program Files (x86)\maven\repository\com\fasterxml\jackson\core\jackson-core\2.9.0\jackson-core-2.9.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\29096"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-10-17"/>
+    <property name="java.home" value="C:\Users\29096\.jdks\openjdk-21.0.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\JavaLearn\WebToEnd\MavenPro\maven_02_ssm"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\29096\AppData\Local\Temp\surefire13511981153570505192\surefirebooter-20240710141950335_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.1+12-29"/>
+    <property name="user.name" value="29096"/>
+    <property name="stdout.encoding" value="GBK"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="D:\Program Files (x86)\maven\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\29096\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2024.1.4"/>
+    <property name="java.version" value="21.0.1"/>
+    <property name="user.dir" value="D:\JavaLearn\WebToEnd\MavenPro\maven_02_ssm"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Users\29096\.jdks\openjdk-21.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;D:\ProVerif\GTK\bin;C:\Windows\System32\HWAudioDriver;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;D:\Program Files (x86)\.jdk\JDK21\bin;D:\Program Files (x86)\MySQL\MySQL Server 8.2\bin;D:\Program Files\nodejs\;D:\Program Files (x86)\apache-maven-3.9.6\bin;C:\Program Files\Docker\Docker\resources\bin;D:\Program Files\Git\cmd;D:\anaconda3;D:\anaconda3\Library\mingw-w64\bin;D:\anaconda3\Library\usr\bin;D:\anaconda3\Library\bin;D:\anaconda3\Scripts;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;%GoLand%;%IntelliJ IDEA%;%WebStorm%;%DevEco Studio%;%DataGrip%;D:\Microsoft VS Code\bin;C:\Users\29096\AppData\Roaming\npm;C:\Users\29096\AppData\Local\GitHubDesktop\bin;%PyCharm%;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="GBK"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.1+12-29"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="maven.repo.local" value="D:\Program Files (x86)\maven\repository"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testGetById" classname="com.itheima.service.BookServiceTest" time="0.518">
+    <system-out><![CDATA[Book{id=1, type='类别测试数据', name='书名测试数据', description='描述测试数据'}
+]]></system-out>
+    <system-err><![CDATA[7月 10, 2024 2:19:50 下午 org.springframework.test.context.support.AbstractTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+信息: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+7月 10, 2024 2:19:50 下午 org.springframework.test.context.support.AbstractTestContextBootstrapper getTestExecutionListeners
+信息: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6ce139a4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6973bf95, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2ddc8ecb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@229d10bd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@47542153, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@33afa13b, org.springframework.test.context.event.EventPublishingTestExecutionListener@7a4ccb53]
+7月 10, 2024 2:19:51 下午 com.alibaba.druid.support.logging.JakartaCommonsLoggingImpl info
+信息: {dataSource-1} inited
+Wed Jul 10 14:19:51 CST 2024 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+]]></system-err>
+  </testcase>
+  <testcase name="testGetAll" classname="com.itheima.service.BookServiceTest" time="0.003">
+    <system-out><![CDATA[[Book{id=1, type='类别测试数据', name='书名测试数据', description='描述测试数据'}, Book{id=2, type='计算机理论', name='Spring 5核心原理与30个类手写实战', description='十年沉淀之作，手写Spring精华思想'}, Book{id=3, type='计算机理论', name='Spring 5 设计模式', description='深入Spring源码剖析Spring源码中蕴含的10大设计模式'}, Book{id=4, type='计算机理论', name='Spring MVC+MyBatis开发从入门到项目实战', description='全方位解析面向Web应用的轻量级框架，带你成为Spring MVC开发高手'}, Book{id=5, type='计算机理论', name='轻量级Java Web企业应用实战', description='源码级剖析Spring框架，适合已掌握Java基础的读者'}, Book{id=6, type='计算机理论', name='Java核心技术 卷I 基础知识（原书第11版）', description='Core Java 第11版，Jolt大奖获奖作品，针对Java SE9、10、11全面更新'}, Book{id=7, type='计算机理论', name='深入理解Java虚拟机', description='5个维度全面剖析JVM，大厂面试知识点全覆盖'}, Book{id=8, type='计算机理论', name='Java编程思想（第4版）', description='Java学习必读经典,殿堂级著作！赢得了全球程序员的广泛赞誉'}, Book{id=9, type='计算机理论', name='零基础学Java（全彩版）', description='零基础自学编程的入门图书，由浅入深，详解Java语言的编程思想和核心技术'}, Book{id=10, type='市场营销', name='直播就该这么做：主播高效沟通实战指南', description='李子柒、李佳琦、薇娅成长为网红的秘密都在书中'}, Book{id=11, type='市场营销', name='直播销讲实战一本通', description='和秋叶一起学系列网络营销书籍'}, Book{id=12, type='市场营销', name='直播带货：淘宝、天猫直播从新手到高手', description='一本教你如何玩转直播的书，10堂课轻松实现带货月入3W+'}, Book{id=14, type='类别测试数据', name='书名测试数据', description='描述测试数据'}]
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/maven_02_ssm/pom.xml" />
         <option value="$PROJECT_DIR$/maven_03_pojo/pom.xml" />
         <option value="$PROJECT_DIR$/maven_04_dao/pom.xml" />
+        <option value="$PROJECT_DIR$/maven_01_parent/pom.xml" />
       </list>
     </option>
   </component>
