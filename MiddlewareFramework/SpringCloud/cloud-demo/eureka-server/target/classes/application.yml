@@ -1,0 +1,17 @@
+server:
+  port: 10086 # 服务端口
+
+spring:
+  application:
+    name: eurekaserver  # eureka的服务名称
+eureka:
+  client:
+    fetch-registry: false    # 要不要去注册中心获取其他服务的地址 , 解决eureka启动时报错
+    register-with-eureka: false    # 是否当前客户端要注册到eureka
+    service-url:  # eureka的地址信息
+      defaultZone: http://localhost:10086/eureka/
+      
+  server:
+    eviction-interval-timer-in-ms: 60000
+    renewal-percent-threshold: 0.85
+    renewal-threshold-update-interval-ms: 60000
