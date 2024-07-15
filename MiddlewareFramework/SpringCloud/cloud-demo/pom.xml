@@ -11,6 +11,7 @@
         <module>user-service</module>
         <module>order-service</module>
         <module>eureka-server</module>
+        <module>feign-api</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -29,6 +30,8 @@
         <spring-cloud.version>Hoxton.SR10</spring-cloud.version>
         <mysql.version>5.1.47</mysql.version>
         <mybatis.version>2.1.1</mybatis.version>
+        <nacos.version>2.2.5.RELEASE</nacos.version>
+        <lombok.version>1.18.30</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -53,13 +56,21 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.version}</version>
             </dependency>
+<!--            nacos-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${nacos.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.30</version>
+            <version>${lombok.version}</version>
         </dependency>
     </dependencies>
 </project>
