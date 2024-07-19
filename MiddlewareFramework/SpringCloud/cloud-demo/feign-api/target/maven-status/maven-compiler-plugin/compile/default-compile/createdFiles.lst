@@ -1,0 +1,4 @@
+cn\itcast\feign\clients\UserClient.class
+cn\itcast\feign\config\FeignClientConfiguration.class
+cn\itcast\feign\pojo\User.class
+cn\itcast\feign\config\CloudConfig.class
