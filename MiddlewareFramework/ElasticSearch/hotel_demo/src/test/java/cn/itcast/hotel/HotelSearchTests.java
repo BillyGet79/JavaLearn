@@ -156,7 +156,7 @@ public class HotelSearchTests {
             long total = searchHits.getTotalHits().value;
             System.out.println(total);
         }
-        //4.2 查询的解惑数组
+        //4.2 查询的结果数组
         SearchHit[] hits = searchHits.getHits();
         for (SearchHit hit : hits) {
             //4.3 得到source
