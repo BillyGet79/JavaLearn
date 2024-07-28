@@ -12,6 +12,9 @@ import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
+import org.elasticsearch.search.aggregations.AggregationBuilders;
+import org.elasticsearch.search.aggregations.Aggregations;
+import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
 import org.elasticsearch.search.sort.SortOrder;
@@ -21,6 +24,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.util.CollectionUtils;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 
 public class HotelSearchTests {
@@ -147,8 +151,7 @@ public class HotelSearchTests {
         //4、解析响应结果
         handleResponse(response);
     }
-
-
+    
     private static void handleResponse(SearchResponse response) {
         SearchHits searchHits = response.getHits();
         //4.1 查询的总条数
@@ -179,6 +182,33 @@ public class HotelSearchTests {
         }
     }
 
+    @Test
+    void testAggregation() throws IOException {
+        //1、准备Request
+        SearchRequest request = new SearchRequest("hotel");
+        //2、准备DSL
+        request.source().size(0);
+        request.source().aggregation(
+                AggregationBuilders
+                        .terms("brandAgg")
+                        .field("brand")
+                        .size(20)
+        );
+        //3、发出请求
+        SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+        //4、解析结果
+        Aggregations aggregations = response.getAggregations();
+        //根据聚合名称获取聚合结果
+        Terms brandAgg = aggregations.get("brandAgg");
+        //获取桶
+        List<? extends Terms.Bucket> buckets = brandAgg.getBuckets();
+        //遍历
+        for (Terms.Bucket bucket : buckets) {
+            //获取key，也就是品牌名称
+            String brandName = bucket.getKeyAsString();
+            System.out.println(brandName);
+        }
+    }
 
     @AfterEach
     void tearDown() throws IOException {
