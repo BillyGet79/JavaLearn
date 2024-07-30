@@ -8,6 +8,7 @@ import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.common.text.Text;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
@@ -18,6 +19,10 @@ import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightField;
 import org.elasticsearch.search.sort.SortOrder;
+import org.elasticsearch.search.suggest.Suggest;
+import org.elasticsearch.search.suggest.SuggestBuilder;
+import org.elasticsearch.search.suggest.SuggestBuilders;
+import org.elasticsearch.search.suggest.completion.CompletionSuggestion;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -207,6 +212,31 @@ public class HotelSearchTests {
             //获取key，也就是品牌名称
             String brandName = bucket.getKeyAsString();
             System.out.println(brandName);
+        }
+    }
+
+    @Test
+    void testSuggest() throws IOException {
+        //1、准备Request
+        SearchRequest request = new SearchRequest("hotel");
+        //2、准备DSL
+        request.source().suggest(new SuggestBuilder()
+                .addSuggestion("suggestions", SuggestBuilders.completionSuggestion("suggestion")
+                        .prefix("h")
+                        .skipDuplicates(true)
+                        .size(10)));
+        //3、发起请求
+        SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+        //4、解析结果
+        Suggest suggest = response.getSuggest();
+        //4.1 根据补全查询名称，获取补全结果
+        CompletionSuggestion suggestions = suggest.getSuggestion("suggestions");
+        //4.2 获取options
+        List<CompletionSuggestion.Entry.Option> options = suggestions.getOptions();
+        //4.3 遍历
+        for (CompletionSuggestion.Entry.Option option : options) {
+            String text = option.getText().toString();
+            System.out.println(text);
         }
     }
 

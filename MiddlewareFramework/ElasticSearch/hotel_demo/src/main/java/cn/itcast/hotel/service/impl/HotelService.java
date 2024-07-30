@@ -8,12 +8,16 @@ import cn.itcast.hotel.pojo.RequestParams;
 import cn.itcast.hotel.service.IHotelService;
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.apache.ibatis.annotations.Delete;
+import org.elasticsearch.action.delete.DeleteRequest;
+import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.geo.GeoPoint;
 import org.elasticsearch.common.unit.DistanceUnit;
+import org.elasticsearch.common.xcontent.XContentType;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
@@ -25,6 +29,10 @@ import org.elasticsearch.search.aggregations.Aggregations;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
 import org.elasticsearch.search.sort.SortBuilders;
 import org.elasticsearch.search.sort.SortOrder;
+import org.elasticsearch.search.suggest.Suggest;
+import org.elasticsearch.search.suggest.SuggestBuilder;
+import org.elasticsearch.search.suggest.SuggestBuilders;
+import org.elasticsearch.search.suggest.completion.CompletionSuggestion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -114,6 +122,60 @@ public class HotelService extends ServiceImpl<HotelMapper, Hotel> implements IHo
             List<String> starNamelist = getList(aggregations, "starNameAgg");
             result.put("星级", starNamelist);
             return result;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public List<String> getSuggestions(String prefix) {
+        try {
+            SearchRequest request = new SearchRequest("hotel");
+            request.source().suggest(new SuggestBuilder()
+                    .addSuggestion("suggestions", SuggestBuilders
+                            .completionSuggestion("suggestion")
+                            .prefix(prefix)
+                            .skipDuplicates(true)
+                            .size(10)));
+            SearchResponse response = client.search(request, RequestOptions.DEFAULT);
+            Suggest suggest = response.getSuggest();
+            CompletionSuggestion suggestions = suggest.getSuggestion("suggestions");
+            List<CompletionSuggestion.Entry.Option> options = suggestions.getOptions();
+            List<String> result = new ArrayList<>(options.size());
+            for (CompletionSuggestion.Entry.Option option : options) {
+                result.add(option.getText().toString());
+            }
+            return result;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        try {
+            //1、准备Request
+            DeleteRequest request = new DeleteRequest("hotel", id.toString());
+            //2、准备发送请求
+            client.delete(request, RequestOptions.DEFAULT);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public void insertById(Long id) {
+        try {
+            //0、根据id查询酒店数据
+            Hotel hotel = getById(id);
+            //转换为文档类型
+            HotelDoc hotelDoc = new HotelDoc(hotel);
+            //1、准备Request
+            IndexRequest request = new IndexRequest("hotel").id(hotel.getId().toString());
+            //2、准备DSL
+            request.source(JSON.toJSONString(hotelDoc), XContentType.JSON);
+            //3、发送请求
+            client.index(request, RequestOptions.DEFAULT);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
