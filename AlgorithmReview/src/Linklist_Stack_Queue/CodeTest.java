@@ -12,11 +12,11 @@ import org.junit.Test;
  * @description TODO
  */
 public class CodeTest {
-    private Linklist linklist;
+    private NodeCode nc;
 
     @Before
     public void setUp() throws Exception {
-        linklist = new Linklist();
+        nc = new NodeCode();
     }
 
     /**
@@ -82,7 +82,7 @@ public class CodeTest {
     public void testReverseLinkedList() {
         int[] test = new int[]{1, 2, 3, 4, 5};
         Node head = getLinklistFromArray(test);
-        head = linklist.reverseLinkedList(head);
+        head = nc.reverseLinkedList(head);
         printLinklist(head);
     }
 
@@ -90,8 +90,16 @@ public class CodeTest {
     public void testReverseDoubleList() {
         int[] test = new int[]{1, 2, 3, 4, 5};
         DoubleNode head = getDoubleLinklistFromArray(test);
-        head = linklist.reverseDoubleList(head);
+        head = nc.reverseDoubleList(head);
         printDoubleList(head);
+    }
+
+    @Test
+    public void testRemoveValue() {
+        int[] test = new int[]{1, 1, 1, 2, 3, 1, 1, 4, 1, 5, 6, 1};
+        Node head = getLinklistFromArray(test);
+        head = nc.removeValue(head, 1);
+        printLinklist(head);
     }
 
 
