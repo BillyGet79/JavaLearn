@@ -1,0 +1,20 @@
+server:
+  port: 9007
+  servlet:
+    encoding:
+      # 设置相应的字符编码，避免流式返回输出乱码
+      charset: utf-8
+      enabled: true
+      force: true
+
+spring:
+  application:
+    name: langchain4j-07chat-stream
+
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${Qwen-api}
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      model-name: qwen-plus
+

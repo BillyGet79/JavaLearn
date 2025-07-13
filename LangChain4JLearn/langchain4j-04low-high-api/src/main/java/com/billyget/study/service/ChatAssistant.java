@@ -9,5 +9,5 @@ package com.billyget.study.service;
  * @description TODO
  */
 public interface ChatAssistant {
-    String chat(String prompt);
+    public String chat(String prompt);
 }
